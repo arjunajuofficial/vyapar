@@ -1,11 +1,13 @@
-h2{
+h1{
     text-align: center;
-    background-color: grey;
+    background-color: lightblue;
     padding: 20px;
     border-radius: 20px;
+    text-shadow: 2px 2px 4px #223344;
+      
 }
 .bg{
-    background-color: aliceblue;
+    background-color: floralwhite;
 }
 .pd{
     text-align: center;

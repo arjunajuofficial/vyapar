@@ -1,12 +1,14 @@
 <div class="bg">
-<div><h2>Product Details</h2><br><div>
-<div class="pd"><input [(ngModel)]="code" type="text" pInputText placeholder="Product Code"/>
+<div><h1>Product Entry</h1><div>
+<div class="pd">
+<b><h3>Enter the product details: </h3></b>
+<input [(ngModel)]="code" type="text" pInputText placeholder="Product Code"/>   
 <input [(ngModel)]="name1" type="text" pInputText placeholder="Product Name"/>
 <input [(ngModel)]="price" type="text" pInputText placeholder="Product Price"/>
 <input [(ngModel)]="gst" type="text" pInputText placeholder="GST Percent"/>
 <button (click)="insert()" pButton type="button" label="Add" ></button>
 </div>
-<div class="table">
+<div class="table"> 
 <p-dataTable [value]="rows" [editable]="true">
     <p-column field="product_code" header="Product_Code" ></p-column>
     <p-column field="product_name" header="Product_Name" [editable]="true"></p-column>
