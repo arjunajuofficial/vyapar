@@ -1,24 +1,53 @@
+
 <div class="bg">
-<div><h1>Product Entry</h1><div>
-<div class="pd">
+<div><h1>Product Entry</h1></div>
+
+
 <b><h3>Enter the product details: </h3></b>
-<input [(ngModel)]="code" type="text" pInputText placeholder="Product Code"/>   
-<input [(ngModel)]="name1" type="text" pInputText placeholder="Product Name"/>
-<input [(ngModel)]="price" type="text" pInputText placeholder="Product Price"/>
-<input [(ngModel)]="gst" type="text" pInputText placeholder="GST Percent"/>
-<button (click)="insert()" pButton type="button" label="Add" ></button>
+
+<span class="ui-float-label">
+    <input [(ngModel)]="code" id="float-input" type="text" size="30" required pInputText> 
+    <label for="float-input">Product Code</label>
+</span><br>
+<span class="ui-float-label">
+    <input [(ngModel)]="name1" id="float-input" type="text" size="30" required pInputText> 
+    <label for="float-input">Product Name</label>
+</span><br>
+<span class="ui-float-label">
+    <input [(ngModel)]="price" id="float-input" type="text" size="30" required pInputText> 
+    <label for="float-input">Product Price</label>
+</span><br>
+<span class="ui-float-label">
+    <input [(ngModel)]="gst" id="float-input" type="text" size="30" required pInputText> 
+    <label for="float-input">Product GST</label>
+</span><br>
+<div class=ui-g>
+<div class=ui-g-3>
+    <button (click)="insert()" pButton type="button" label="Add Product" ><i class="fa fa-paper-plane-o"></i></button>
 </div>
-<div class="table"> 
+<div class=ui-g-4>
+
+</div>
+<div class=ui-g-4>
+    
+</div>
+<div class=ui-g-1>
+    <button [routerLink]=" ['./billpage']" pButton type="button" label="Billing " ><i class="fa fa-paper-plane-o"></i></button>
+</div>
+
+</div>
+<div> 
 <p-dataTable [value]="rows" [editable]="true">
-    <p-column field="product_code" header="Product_Code" ></p-column>
+    <p-column field="product_code" header="Product_Code" [editable]="true" ></p-column>
     <p-column field="product_name" header="Product_Name" [editable]="true"></p-column>
     <p-column field="product_price" header="Product_Price" [editable]="true"></p-column>
     <p-column field="product_gst" header="Product_GST" [editable]="true"></p-column>
     <p-column header="Edit">
         <ng-template let-product="rowData" let-i="rowIndex"  pTemplate="body">
-            <button type="button" pButton (click)="update(product)" icon="fa-edit"></button>
+            <button type="button" pButton (click)="update(product)" iconPos="right" label="Update"><i class="fa fa-edit"></i></button>
         </ng-template>
     </p-column>
 </p-dataTable>
 </div>
+
 </div>

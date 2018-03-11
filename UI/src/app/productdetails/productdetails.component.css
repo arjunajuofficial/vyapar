@@ -1,17 +1,16 @@
 h1{
     text-align: center;
-    background-color: lightblue;
+    background-color: rgb(53, 81, 94);
     padding: 20px;
     border-radius: 20px;
     text-shadow: 2px 2px 4px #223344;
       
 }
 .bg{
-    background-color: floralwhite;
+    background-color: lightblue;
+    border-radius: 20px;
 }
-.pd{
-    text-align: center;
-}
+
 .table{
     margin: 100px;
 }

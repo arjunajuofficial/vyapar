@@ -10,19 +10,27 @@ import { HttpModule } from '@angular/http';
 //import { BillingComponent } from './billing/billing.component';
 import {DataTableModule} from 'primeng/datatable';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { BillingComponent } from './billing/billing.component';
+import {MenuModule} from 'primeng/menu';
+import {MenuItem} from 'primeng/api';
+import {AutoCompleteModule} from 'primeng/autocomplete';
+
 @NgModule({
   declarations: [
     AppComponent,
-    ProductdetailsComponent
+    ProductdetailsComponent,
+    BillingComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([{path:'',component:ProductdetailsComponent}]),
+    RouterModule.forRoot([{path:'',component:ProductdetailsComponent},{path:'billpage',component:BillingComponent}]),
     InputTextModule,
     HttpModule,
     FormsModule,
     ButtonModule,
-    DataTableModule
+    DataTableModule,
+    MenuModule,
+    AutoCompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]
