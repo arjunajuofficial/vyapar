@@ -1,0 +1,9 @@
+Create a Database named <ps> :
+   
+   CREATE DATABASE ps;
+
+Create the table needed:
+
+
+    CREATE TABLE `ps`.`products` ( `product_code` VARCHAR(30) NOT NULL , `product_name` VARCHAR(30) NOT NULL , `product_price` INT NOT NULL , `product_gst` INT NOT NULL , PRIMARY KEY (`product_code`)) ENGINE = InnoDB;
+
