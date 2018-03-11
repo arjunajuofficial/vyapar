@@ -53,10 +53,10 @@ export class BillingComponent implements OnInit {
       }
     }
     for (let i = 0; i < this.rows.length; i++) {
-      let brand1 = this.rows[i].product_code;
-      const body = { product_code:this.rows[i].product_code, product_name:brand1 , product_price: this.rows[i].product_price, product_gst: this.rows[i].product_gst };
+      let brand = this.rows[i].product_code;
+      const body = { product_code:brand, product_name:this.rows[i].product_name , product_price: this.rows[i].product_price, product_gst: this.rows[i].product_gst };
       this.hundred = 100;
-      if (name == brand1) {
+      if (name == brand) {
         this.newdata.push(body);
       }
     }
