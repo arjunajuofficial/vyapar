@@ -29,12 +29,10 @@ export class BillingComponent implements OnInit {
   search = function (event) {
     this.filtered = [];
     var sr = event.query;
-    var flag=0;
     for (let i = 0; i < this.rows.length; i++) {
       let brand = this.rows[i].product_code;
       if (brand.toLowerCase().indexOf(sr.toLowerCase()) == 0) {
         this.filtered.push(brand);
-        flag=1;
       }
     }
     for (let i = 0; i < this.rows.length; i++) {
@@ -79,14 +77,5 @@ export class BillingComponent implements OnInit {
       }
     }
   }
-  delete=function(obj)
-    {
-    
-      for (let i = 0; i < this.newdata.length; i++) {
-        if(obj.product_name==this.newdata[i].product_name)
-        {
-          this.newdata.splice(i,1);
-        }
-      }
-    }
+
 }
