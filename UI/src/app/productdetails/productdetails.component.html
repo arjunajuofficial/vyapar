@@ -22,8 +22,11 @@
     <label for="float-input">Product GST</label>
 </span><br>
 <div class=ui-g>
-<div class=ui-g-3>
+<div class=ui-g-1.5>
     <button (click)="insert()" pButton type="button" label="Add Product" ><i class="fa fa-paper-plane-o"></i></button>
+</div>
+<div class="ui-g-1.5">
+ <button onClick="document.location.reload(true)" pButton type="button" label="Reset" ><i class="fa fa-refresh"></i></button>
 </div>
 <div class=ui-g-4>
 
@@ -45,6 +48,8 @@
     <p-column header="Edit">
         <ng-template let-product="rowData" let-i="rowIndex"  pTemplate="body">
             <button type="button" pButton (click)="update(product)" iconPos="right" label="Update"><i class="fa fa-edit"></i></button>
+            <button type="button" pButton (click)="delete(product)" iconPos="right" label="Delete"><i class="fa fa-warning"></i></button>
+
         </ng-template>
     </p-column>
 </p-dataTable>

@@ -33,5 +33,10 @@ export class ProductdetailsComponent implements OnInit {
     const body={code:product.product_code,name:product.product_name,price:product.product_price,gst:product.product_gst};
     this.http.post('http://localhost:8000/update',body).subscribe();
   }
+  delete=function(product)
+  {
+    const body={name:product.product_name};
+    this.http.post('http://localhost:8000/productdelete',body).subscribe();
+  }
   
 }
