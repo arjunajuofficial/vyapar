@@ -7,13 +7,13 @@ import { RouterModule } from '@angular/router';
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import { HttpModule } from '@angular/http';
-//import { BillingComponent } from './billing/billing.component';
 import {DataTableModule} from 'primeng/datatable';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { BillingComponent } from './billing/billing.component';
 import {MenuModule} from 'primeng/menu';
 import {MenuItem} from 'primeng/api';
 import {AutoCompleteModule} from 'primeng/autocomplete';
+import {TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import {AutoCompleteModule} from 'primeng/autocomplete';
     ButtonModule,
     DataTableModule,
     MenuModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

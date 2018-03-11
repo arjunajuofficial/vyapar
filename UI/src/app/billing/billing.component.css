@@ -1,0 +1,19 @@
+.bg{
+    background-color: lightblue;
+    border-radius: 20px;
+}
+.tab{
+  margin: 50px 0px 0px 0px;
+  padding: 50px 0px 0px 0px;
+}
+.sb{
+    text-align: center;
+    background-color: rgb(53, 81, 94);
+    padding: 20px;
+    border-radius: 20px;
+    text-shadow: 2px 2px 4px #223344;
+}
+h1{
+    text-align: center;
+    padding: 60px;
+}

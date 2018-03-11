@@ -1,3 +1,60 @@
-<p-autoComplete [(ngModel)]="val" [suggestions]="filtered" (completeMethod)="search($event)"></p-autoComplete>
-<button (click)="addedproducts()" pButton type="button" label="Add" ></button>
+<div class="bg">
+<div class="sb">
+<p-autoComplete [(ngModel)]="val" [suggestions]="filtered" (completeMethod)="search($event)" placeholder="Search Products"></p-autoComplete>
+<button (click)="addedproducts()" pButton type="button" label="Add To Cart" ></button>
+</div>
+<div class="ui-g">
+  <div class="ui-g-0.5"></div>
+<div class="ui-g-3">
+    <button [routerLink]=" ['/']" pButton type="button" label="Home" ><i class="fa fa-arrow-left"></i></button>
+</div>
+<div class="ui-g-3"></div>
+<div class="ui-g-3"></div>
+<div class="ui-g-2"></div>
 
+
+<div class="ui-g-1">
+    <button onClick="document.location.reload(true)" pButton type="button" label="Reset" ><i class="fa fa-refresh"></i></button>
+</div>
+</div>
+<div>
+  <h1>Billing</h1>
+</div>
+
+<div class="tab" >
+<p-table [value]="newdata">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Product code</th>
+                <th>Product name</th>
+                <th>Product price</th>
+                <th>Product gst</th>
+                <th>Enter Quantity</th>
+                <th>Total Cost</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-i>
+            <tr>
+                <td>{{i.product_code}}</td>
+                <td>{{i.product_name}}</td>
+                <td>{{i.product_price}}</td>
+                <td>{{i.product_gst}}</td>
+                <td><input type="number" pInputText [(ngModel)]="i.quantity" (keyup)="editquantity()"></td>
+                <td>{{(i.product_price*i.quantity)+(i.product_price*i.quantity*i.product_gst/100)|number}}</td>
+             </tr>
+             
+        </ng-template>
+        <ng-template pTemplate="footer">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td align="center">Gross Total:</td>
+                <td align="center">{{total}}</td>
+               </tr>
+        </ng-template>
+    </p-table> 
+    
+  </div>   
+  </div>
